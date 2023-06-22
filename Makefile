@@ -7,8 +7,7 @@ lint:
 	pylint --disable=R,C,W1203,W0702 app.py
 
 test:
-	#python -m pytest -vv --cov=app test_app.py
-	python -m pytest --cov=app --cov-report=term-missing --cov-config=line_numbers=True
+	python -m pytest --cov=app --cov-report=term-missing --cov-config=line_numbers=True test_app.py
 
 build:
 	docker build -t flask-change:latest .
